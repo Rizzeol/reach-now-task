@@ -4,15 +4,37 @@
 
 This Project was scaffolded using [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. More project description to be added ...
 
-## Build the Docker Image
+## Normal Build and Run
+
+### Install Node Modules
+```
+npm install
+```
+
+### Start Server 
+```
+npm run start:dev
+```
+
+### Now you can call the api endpoint
+```
+http://localhost:3000/api?username=helloworld&languages=python,java
+```
+The above is Get API. The parameter details is as following: 
+
+**username**: search query for user / **languages**: programming language to filter search query
+
+![Result Sample](./img/sample.png)
+
+### Build the Docker Image
 
 ```bash
 docker build -t reach-now-task .
 ```
-## Start Docker Daemon client
+### Start Docker Daemon client
 Please start your Docker Daemon client in your machine. Make sure you have logined to docker client and have access to the docker resources.
 
-## Run the image
+### Run the image
 
 ```
 docker run -p 3000:3000 reach-now-task
@@ -23,9 +45,6 @@ docker run -p 3000:3000 reach-now-task
 ## Test
 
 ```bash
-# unit tests
-$ npm run test
-
 # e2e tests
 $ npm run test:e2e
 

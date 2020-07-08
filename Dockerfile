@@ -6,6 +6,7 @@ ADD package.json /app/package.json
 
 RUN npm config set registry http://registry.npmjs.org
 
+COPY . .
 RUN npm install
 
 ADD . /app
