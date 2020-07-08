@@ -6,4 +6,5 @@ Dockerfile*
 docker-compose*
 README.md
 LICENSE
+dist/
 img
